@@ -20,7 +20,7 @@ io.on('connection', socket => {
     connectedUsers[user] = socket.id;
 });
 
-mongoose.connect('mongodb+srv://vcanuto:vcanuto@cluster0-b6ibv.mongodb.net/omnistack8?retryWrites=true&w=majority', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://<user>:<senha>@cluster0-b6ibv.mongodb.net/omnistack8?retryWrites=true&w=majority', { useNewUrlParser: true });
 
 app.use((req, res, next) => {
     req.io = io;
